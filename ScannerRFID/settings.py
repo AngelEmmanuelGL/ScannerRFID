@@ -56,7 +56,7 @@ ROOT_URLCONF = "ScannerRFID.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": ['templates'],
+        "DIRS": ['templates', "templates.Alumnos", "templates.Maestros"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -78,7 +78,7 @@ WSGI_APPLICATION = "ScannerRFID.wsgi.application"
 DATABASES = DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "DJangoUsers",
+        "NAME": "RFID",
         "USER": "postgres",
         "PASSWORD": "chivas241",
         "HOST": "127.0.0.1",
@@ -122,7 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "static/"
-STATICFILE_DIRS = [
+STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 

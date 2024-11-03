@@ -6,9 +6,10 @@ class ALumnos(models.Model):
         n_reticulate = models.IntegerField(null = False)
         semester = models.IntegerField(null = False)
         career = models.CharField(null=False, editable = True)
-        RFID = models.IntegerField(null = False, editable = True, unique = True)
+        RFID = models.CharField(null = False, editable = True, unique = True)
+        
         def __str__(self):
-            return self.name0001481820
+            return self.name
 
 #data base models entity<->relation
 #--(entity)Maaestros

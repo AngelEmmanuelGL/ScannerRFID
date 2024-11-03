@@ -1,0 +1,15 @@
+{% extends "./layouts/extends.html" %}
+{% block title %}<title>MAESTROS</title>{% endblock %}
+{% block body %}
+<form method = "get">
+    <label>Nombres: </label>
+    <input type="text" name = "name">
+    <label>Apellidos: </label>
+    <input type="text" name = "last_name">
+    <label>Numero de control: </label>
+    <input type="text" name = "n_reticulate">
+    <label>RFID: </label>
+    <input type="text" name = "RFID">
+    <button type="submit">REGISTRAR</button>
+</form>
+{% endblock %}
