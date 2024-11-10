@@ -56,7 +56,7 @@ ROOT_URLCONF = "ScannerRFID.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": ['templates', "templates.Alumnos", "templates.Maestros"],
+        "DIRS": ['templates', "templates.Alumnos", "templates.Maestros", "templates.forms"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

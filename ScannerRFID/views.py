@@ -3,14 +3,10 @@ from django.http import HttpResponse
 from Alumnos.models import ALumnos
 from Maestros.models import Mestros
 
-
 #pruebas
 def prueba(request):
     return render(request, "prueba.html", {})
 
-def mostrar(request):
-    allData = ALumnos.objects.all
-    return render(request, "", {"data":allData})
 #index
 def index(request):
     return render(request, "index.html", {})
@@ -40,7 +36,7 @@ def maestro(request):
     return HttpResponse(f"Maestro con nombre {name} se ah dado de alta")
     
 def consulta(request):
-    rfid = request.GET["rfid"]
+    rfid = request.GET["RFID"]
     try: 
         get_data = Mestros.objects.get(RFID = rfid)
     except Mestros.DoesNotExist:

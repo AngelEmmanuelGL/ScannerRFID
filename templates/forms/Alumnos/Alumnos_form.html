@@ -1,19 +1,31 @@
-{% extends "./layouts/extends.html" %}
-{% block title %}<title>Alumnos</title>{% endblock %}
-{% block body %}
-<form action="{% url 'addAlumno' %}" method = "get">
-    <label>Nombres: </label>
-    <input type="text" name = "name">
-    <label>Apellidos: </label>
-    <input type="text" name = "last_name">
-    <label>Numero de control: </label>
-    <input type="text" name = "n_reticulate">
-    <label>Semestre: </label>
-    <input type="text" name = "semester">
-    <label>Carrera: </label>
-    <input type="text" name = "career">
-    <label>RFID: </label>
-    <input type="text" name = "RFID">
-    <button type="submit">REGISTRAR</button>
-</form>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRAR</title>
+</head>
+<body>
+    <form action="{% url 'addAlumno' %}" method = "get">
+        <center><label>Nombres: </label></center>
+        <center><input type="text" name = "name"></center>
+        <hr>
+        <center><label>Apellidos: </label></center>
+        <center><input type="text" name = "last_name"></center>
+        <hr>
+        <center><label>Numero de control: </label></center>
+        <center><input type="text" name = "n_reticulate"></center>
+        <hr>
+        <center><label>Semestre: </label></center>
+        <center><input type="text" name = "semester"></center>
+        <hr>
+        <center><label>Carrera: </label></center>
+        <center><input type="text" name = "career"></center>
+        <hr>
+        <center><label>RFID: </label></center>
+        <center><input type="text" name = "RFID"></center>
+        <hr>
+        <center><button type="submit">REGISTRAR</button></center>
+    </form>
+</body>
+</html>
