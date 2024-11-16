@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+<head>
+    <title>Lista de Números</title>
+    <link rel="stylesheet" href="{% static 'styleForBlocks.css' %}">
+</head>
+<body>
+    <h1>Numero Control:</h1>
+    <input type="number" id="numero">
+    <button onclick="agregarNumero()">Agregar</button>
+    <table id="tablaNumeros">
+        <thead>
+            <tr>
+                <th>Numero</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>

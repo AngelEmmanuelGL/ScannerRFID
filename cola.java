@@ -36,7 +36,7 @@ public class cola {
         cola = new int[longitud];
         primero = 0;
         ultimo = -1;
-        this.longitud 
+        this.longitud; 
     }
     public static Boolean colaVacia(){
         return true;

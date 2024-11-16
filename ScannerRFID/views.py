@@ -5,7 +5,7 @@ from Maestros.models import Mestros
 
 #pruebas
 def prueba(request):
-    return render(request, "prueba.html", {})
+    return render(request, "hindex2.html", {})
 
 #index
 def index(request):
