@@ -1,31 +1,41 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REGISTRAR</title>
+    <link rel="stylesheet" href="{% static 'styleform.css' %}">
+    
+
+    <!-- Estilos CSS -->
 </head>
 <body>
-    <form action="{% url 'addAlumno' %}" method = "get">
-        <center><label>Nombres: </label></center>
-        <center><input type="text" name = "name"></center>
-        <hr>
-        <center><label>Apellidos: </label></center>
-        <center><input type="text" name = "last_name"></center>
-        <hr>
-        <center><label>Numero de control: </label></center>
-        <center><input type="text" name = "n_reticulate"></center>
-        <hr>
-        <center><label>Semestre: </label></center>
-        <center><input type="text" name = "semester"></center>
-        <hr>
-        <center><label>Carrera: </label></center>
-        <center><input type="text" name = "career"></center>
-        <hr>
-        <center><label>RFID: </label></center>
-        <center><input type="text" name = "RFID"></center>
-        <hr>
-        <center><button type="submit">REGISTRAR</button></center>
-    </form>
+    <a href="{% url 'most' %}">Mostrar alumnos</a>
+
+    <div class="form-container">
+        <h1>Registrar Alumno</h1>
+        <form action="{% url 'addAlumno' %}" method="get">
+            <label for="name">Nombres: </label>
+            <input type="text" name="name" id="name">
+
+            <label for="last_name">Apellidos: </label>
+            <input type="text" name="last_name" id="last_name">
+
+            <label for="n_reticulate">Numero de control: </label>
+            <input type="text" name="n_reticulate" id="n_reticulate">
+
+            <label for="semester">Semestre: </label>
+            <input type="text" name="semester" id="semester">
+
+            <label for="career">Carrera: </label>
+            <input type="text" name="career" id="career">
+
+            <label for="RFID">RFID: </label>
+            <input type="text" name="RFID" id="RFID">
+
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
 </body>
 </html>

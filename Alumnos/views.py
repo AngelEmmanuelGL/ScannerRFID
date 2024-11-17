@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from .models import ALumnos
 from datetime import datetime  
+
 def form_alumno(request):
     return render(request, "forms/Alumnos/Alumnos_form.html", {})
 

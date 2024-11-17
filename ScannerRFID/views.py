@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from Alumnos.models import ALumnos
 from Maestros.models import Mestros
+from django.http import JsonResponse
+from datetime import datetime
 
 #pruebas
 def prueba(request):
@@ -41,3 +43,23 @@ def consulta(request):
         get_data = Mestros.objects.get(RFID = rfid)
     except Mestros.DoesNotExist:
         get_data = ALumnos.objects.get(RFID = rfid)
+        
+def consul(request):
+    # Obtener el valor de 'numero' que será usado como 'id'
+    numero = request.GET.get("numero")
+    print("Número recibido:", numero)  # Agrega esta línea para ver qué número se está recibiendo
+    if not numero:
+        return JsonResponse({"error": "Número no proporcionado"}, status=400)
+
+    try:
+        # Consultar el alumno con el 'numero' que corresponde a 'id'
+        alumno = ALumnos.objects.get(n_reticulate=numero)  # Asegúrate de que 'n_reticulate' sea el nombre correcto del campo
+        hour = datetime.now().strftime("%H:%M:%S")
+        data = {
+            "nombre": alumno.name,
+            "hora": hour,
+        }
+        return JsonResponse(data)
+
+    except ALumnos.DoesNotExist:
+        return JsonResponse({"error": "Alumno no encontrado"}, status=404)

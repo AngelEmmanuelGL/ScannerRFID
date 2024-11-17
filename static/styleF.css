@@ -1,0 +1,64 @@
+h1 {
+    color: #484bda;
+}
+/* Asegura que la tabla ocupe todo el ancho disponible */
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: 20px auto;  /* Centra la tabla en la página */
+}
+
+/* Estilo de las celdas de la tabla (números y encabezados) */
+th, td {
+    border: 1px solid #ddd;   /* Bordes sutiles */
+    padding: 10px;
+    text-align: center;        /* Centra el texto en las celdas */
+}
+
+/* Fondo del encabezado de la tabla */
+th {
+    background-color: #1022c4; /* Color verde */
+    color: white;              /* Texto blanco */
+}
+
+/* Fondo de las celdas del cuerpo de la tabla */
+td {
+    background-color: #f9f9f9; /* Fondo blanco suave */
+}
+
+/* Estilo para los botones */
+button {
+    background-color: #484bda;  /* Fondo verde */
+    color: white;                /* Texto blanco */
+    padding: 10px 20px;          /* Espaciado del botón */
+    border: none;
+    cursor: pointer;            /* Cambia el cursor al pasar por encima */
+    font-size: 16px;
+    border-radius: 5px;         /* Bordes redondeados */
+    margin-top: 20px;            /* Espacio arriba del botón */
+}
+
+/* Cambio de color al pasar el ratón por encima del botón */
+button:hover {
+    background-color: #49329c; /* Cambio a un verde más oscuro */
+}
+
+/* Estilo para el campo de entrada */
+input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 50%;                  /* Ancho del input */
+    margin: 10px 0;              /* Espaciado alrededor */
+    display: block;              /* Hace que se apile debajo del título */
+    border: 1px solid #ddd;     /* Borde gris claro */
+    border-radius: 5px;         /* Bordes redondeados */
+    text-align: center;          /* Centra el texto dentro del input */
+}
+
+/* Estilo del contenedor principal */
+body {
+    font-family: Arial, sans-serif; /* Fuente limpia */
+    background-color: #f4f4f9;      /* Fondo suave */
+    padding: 20px;
+    text-align: center;
+}

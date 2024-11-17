@@ -1,22 +1,37 @@
 {% load static %}
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Números</title>
-    <link rel="stylesheet" href="{% static 'styleForBlocks.css' %}">
+    <link rel="stylesheet" href="{% static 'styleF.css' %}">
 </head>
 <body>
-    <h1>Numero Control:</h1>
-    <input type="number" id="numero">
-    <button onclick="agregarNumero()">Agregar</button>
+    <h1>Consulta de Alumno:</h1>
+    <a href="{% url 'form_alumno' %}">REGISTRAR</a>
+    <center>
+        <label for="numero">Número de Alumno:</label>
+        <input type="number" id="numero" name="numero" min="1" placeholder="Ingresa el número">
+    </center>
+    <br>
+    <center><button onclick="agregarNumero()">Consultar</button></center>
+
     <table id="tablaNumeros">
         <thead>
             <tr>
                 <th>Numero</th>
+                <th>Nombre</th>
+                <th>Hora</th>
             </tr>
         </thead>
+        
         <tbody>
+            <!-- Aquí se agregarán las filas dinámicamente -->
         </tbody>
     </table>
-    <script src="script.js"></script>
+
+    <!-- Cargar el archivo JS -->
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

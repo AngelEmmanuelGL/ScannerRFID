@@ -6,11 +6,29 @@
     <title>Document</title>
 </head>
 <body>
-    <ul>
+    <center><table border="2">
+        <thead>
+            <tr>
+                <th>Apellidos</th>
+                <th>Nombre</th>
+                <th>RFID</th>
+                <th>Semestre</th>
+                <th>Carrera</th>
+                <th>Semestre</th>
+            </tr>
+        </thead>
+        <tbody>
             {% for student in data %}
-                <li><h5>{{ student.last_name }} {{ student.name }}</h5></li>
+                <tr>
+                    <td><h4>{{ student.last_name }}</h4></td>
+                    <td><h4>{{ student.name }}</h4></td>
+                    <td><h4>{{ student.RFID }}</h4></td>
+                    <td><h4>{{ student.semester }}</h4></td>
+                    <td><h4>{{ student.n_reticulate }}</h4></td>
+                    <td><h4>{{ student.career }}</h4></td>
+                </tr>
             {% endfor %}
-    </ul>
-    
+        </tbody>
+    </table></center>
 </body>
 </html>
